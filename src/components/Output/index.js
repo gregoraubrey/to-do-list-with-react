@@ -1,11 +1,23 @@
 import React from 'react';
 import './index.css';
 
-function Output({ value }) {
+function Output({ todos, handleDelete, toggleCompleted }) {
     return (
-        <div className="output">
-            <p>{value}</p>
-        </div>
+        <ul className="output">
+        {todos.length === 0 && "No todos yet!"}
+        {todos.map(x => {
+            return (
+                <>
+                <li key={x.id} className={x.completed ? "completed" : ""}>
+                    <input type="checkbox" checked={x.completed} onChange={()=> toggleCompleted(x.id)}></input>
+                    <span className={x.completed ? "text-completed" : ""}>{x.text}</span>
+                    <button className="delete-button" onClick={()=> handleDelete(x.id)}>Delete</button>
+                </li>
+                </>
+            )
+        }
+        )}
+        </ul>
     );
 }
 

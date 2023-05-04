@@ -1,0 +1,11 @@
+.text-completed {
+    text-decoration: line-through;
+  }
+
+.completed {
+    background-color: #e6e6e6;
+  }
+
+  .completed:hover {
+    background-color: #44b2dd;
+}
