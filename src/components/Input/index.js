@@ -6,6 +6,7 @@ function Input({ handleChange, value }) {
     <input
       className="input"
       type="text"
+      placeholder="Add new todo"
       onChange={handleChange}
       value={value}
     ></input>
