@@ -4,7 +4,7 @@ import './index.css';
 function Output({ todos, handleDelete, toggleCompleted }) {
     return (
         <ul className="output">
-        {todos.length === 0 && "No todos yet!"}
+        {todos.length === 0 && <h3 className="no-todos-message">No todos yet!</h3>}
         {todos.map(x => {
             return (
                 <>
