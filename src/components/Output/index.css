@@ -1,50 +1,48 @@
 .no-todos-message {
-    font-size: 24px;
-    color: #f50000;
-    text-align: center;
-    margin-top: 100px;
-  }
-  
-  .todo-list {
-    margin-top: 20px;
-    padding: 0;
-    list-style: none;
-  }
+  font-size: 24px;
+  color: #f50000;
+  text-align: center;
+  margin-top: 100px;
+}
 
+.todo-list {
+  margin-top: 20px;
+  padding: 0;
+  list-style: none;
+}
 
 li {
-    padding: 10px;
-    border: 1px solid #ccc;
-    margin-bottom: 10px;
-    display: flex;
-    align-items: center;
-  }
-  
-  li span {
-    margin-left: 10px;
-    font-size: 18px;
-    text-decoration: none;
-    color: #333;
-  }
-  
-  li.completed span {
-    text-decoration: line-through;
-    color: #999;
-  }
-  
-  button.delete-button {
-    margin-left: auto;
-    background-color: #f44336;
-    color: white;
-    border: none;
-    padding: 8px 16px;
-    border-radius: 4px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  
-  button.delete-button:hover {
-    background-color: #d32f2f;
-  }
-  
+  padding: 10px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+li span {
+  margin-left: 10px;
+  font-size: 18px;
+  text-decoration: none;
+  color: #333;
+}
+
+li.completed span {
+  text-decoration: line-through;
+  color: #999;
+}
+
+button.delete-button {
+  margin-left: auto;
+  background-color: #f44336;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button.delete-button:hover {
+  background-color: #d32f2f;
+}

@@ -1,10 +1,12 @@
-import React from 'react';
-import './index.css';
+import React from "react";
+import "./index.css";
 
 function Button({ handleSubmit }) {
-    return (
-        <button className="button" onClick={handleSubmit}>Add</button>
-    );
+  return (
+    <button className="button" onClick={handleSubmit}>
+      Add
+    </button>
+  );
 }
 
 export default Button;
