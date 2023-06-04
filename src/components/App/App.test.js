@@ -8,14 +8,37 @@ test('renders app title', () => {
   expect(titleElement).toBeInTheDocument();
 });
 
-test('adds a new todo item', () => {
+// test('displays "No todos yet!" message when there are no todos', () => {
+//   const { getByText } = render(<Output todos={[]} />);
+//   expect(getByText(/No todos yet!/i)).toBeInTheDocument();
+// });
+
+test('adds a new todo item and deletes it', () => {
   const { getByPlaceholderText, getByText } = render(<App />);
   const inputElement = getByPlaceholderText(/Add new todo/i);
   const addButtonElement = getByText(/Add/i);
 
-  fireEvent.change(inputElement, { target: { value: 'Test Todo' } });
+  fireEvent.change(inputElement, { target: { value: 'my first to-do' } });
   fireEvent.click(addButtonElement);
 
-  const todoElement = getByText(/Test Todo/i);
+  const todoElement = getByText(/my first to-do/i);
   expect(todoElement).toBeInTheDocument();
+
+  const deleteButtonElement = getByText(/Delete/i);
+
+  fireEvent.click(deleteButtonElement);
+
+  
+  expect(todoElement).not.toBeInTheDocument();
 });
+
+// test('marks a todo item as completed', () => {
+//   const { getByText } = render(<App />);
+//   const todoElement = getByText(/my first to-do/i);
+//   const checkboxElement = todoElement.querySelector('input[type="checkbox"]');
+
+//   fireEvent.click(checkboxElement);
+
+//   expect(todoElement).toHaveClass('completed');
+// });
+
